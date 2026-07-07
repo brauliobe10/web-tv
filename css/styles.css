@@ -1,0 +1,737 @@
+/* --- ESTILOS GENERALES --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Google Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* --- BARRA DE NAVEGACIÓN (Escritorio por defecto) --- */
+.navbar {
+    width: 100%;
+    background-color: #fffaf5;
+    padding: 20px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye logo a la izq y menú a la der */
+    padding: 0 40px;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #7a3e09;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #75480d;
+}
+
+/* Ocultar el botón de hamburguesa en pantallas grandes de PC */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #1a1a1a;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+/* --- SECCIÓN HERO --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Ocupa el 85% de la altura de la pantalla */
+    /* REEMPLAZA 'paisaje.jpg' con tu imagen de las montañas */
+    background-image: url('/imagenes/background.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* Alinea el texto en la parte inferior */
+    padding: 60px 10%;
+}
+
+/* Capa oscura sutil sobre la imagen para mejorar la lectura del texto blanco */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Por encima de la capa oscura */
+    color: #ffffff;
+    max-width: 600px;
+}
+
+/* Recuadro de "LOGO" */
+.hero-badge {
+    border: 1px solid #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.square-icon {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+/* Título Principal */
+.hero-title {
+    font-size: 4.5rem; /* Tamaño grande y de impacto */
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- ESTILOS COMPLEMENTARIOS (HISTORIA Y TRADICIÓN) --- */
+.info-section {
+    background-color: #fffaf5;
+    padding: 80px 40px;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+}
+
+.info-column {
+    flex: 1;
+}
+
+.info-column h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4e2e04;
+}
+
+.info-column p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #503319;
+}
+
+/* --- ESTILOS DEL FOOTER --- */
+.main-footer {
+    background-color: #fffaf5;
+    padding: 60px 40px 30px 40px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    height: 65px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer-slogan {
+    font-size: 1.05rem;
+    color: #503319;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+}
+
+.footer-contact a {
+    color: #503319;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0dacb;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer-legal span {
+    margin-right: 20px;
+}
+
+.privacy-link {
+    color: #555;
+    text-decoration: none;
+}
+
+/* Iconos de redes sociales de colores fijos del diseño */
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- ESTILOS SUBPÁGINA PROYECTOS (PRÓXIMAMENTE) --- */
+.coming-soon-section {
+    background-color: #fffaf5; /* Mismo fondo sutil que el resto del sitio */
+    min-height: 60vh; /* Altura suficiente para que resalte entre nav y footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.coming-soon-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.badge-proyectos {
+    display: inline-block;
+    border: 1px solid #1a1a1a;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.coming-soon-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.coming-soon-message {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 35px;
+}
+
+/* Detalle visual opcional: Una sutil barra de carga de progreso */
+.loading-bar {
+    width: 120px;
+    height: 3px;
+    background-color: #e0dacb;
+    margin: 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 40%;
+    height: 100%;
+    background-color: #1a1a1a;
+    animation: loadingAnimation 2s infinite ease-in-out;
+}
+
+/* --- ESTILOS SUBPÁGINA COMUNIDAD Y COMENTARIOS --- */
+.comunidad-section {
+    background-color: #ede6da; /* Tono beige/blanco roto exacto de tu captura */
+    padding: 80px 10%;
+}
+
+.comunidad-intro {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.comunidad-intro h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.comunidad-intro p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Caja de Comentarios */
+.comments-container {
+    max-width: 800px;
+    background: #fffaf5;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.comments-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-form {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.comment-form input, 
+.comment-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0dacb;
+    background-color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form input:focus, 
+.comment-form textarea:focus {
+    border-color: #1a1a1a;
+}
+
+.btn-submit {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #444444;
+}
+
+/* Listado de comentarios */
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-card {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #e0dacb;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e0dacb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    flex-shrink: 0;
+}
+
+.comment-body {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.comment-header h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #888888;
+}
+
+.comment-body p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444444;
+}
+
+/* --- ESTILOS APARTADO BLOG --- */
+.blog-section {
+    background-color: #fffaf5; /* Fondo claro continuo */
+    padding: 60px 40px;
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-filter {
+    margin-bottom: 40px;
+}
+
+.filter-link {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #c07a4a; /* Color naranja apagado / tierra de tu captura */
+    transition: opacity 0.2s ease;
+}
+
+.filter-link:hover {
+    opacity: 0.8;
+}
+
+/* Configuración de la cuadrícula adaptativa */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Estilos de las Tarjetas */
+.blog-card {
+    background-color: #ffffff;
+    border: 1px solid #ede6da;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que las imágenes llenen el espacio sin deformarse */
+}
+
+.card-content {
+    padding: 24px 20px;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.card-excerpt {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* Footer de la tarjeta (Autor y Opciones) */
+.card-footer {
+    padding: 16px 20px;
+    border-top: 1px solid #fffaf5;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.post-date {
+    font-size: 0.78rem;
+    color: #777777;
+}
+
+.card-options-btn {
+    background: transparent;
+    border: none;
+    color: #444444;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.card-options-btn:hover {
+    color: #000000;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .blog-section {
+        padding: 40px 20px;
+    }
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comunidad-section {
+        padding: 40px 20px;
+    }
+    .comunidad-intro h1 {
+        font-size: 2.5rem;
+    }
+    .comments-container {
+        padding: 20px;
+    }
+}
+
+@keyframes loadingAnimation {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(200%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Ajustes Responsive */
+@media (max-width: 480px) {
+    .coming-soon-section h1 {
+        font-size: 2.5rem;
+    }
+    .coming-soon-message {
+        font-size: 1rem;
+    }
+}
+
+/* Colores exactos de tu imagen */
+.social-icon.fb { background-color: #1877f2; }
+.social-icon.ig { background-color: #e1306c; }
+.social-icon.yt { background-color: #ff0000; }
+.social-icon.x-twitter { background-color: #000000; }
+.social-icon.ln { background-color: #0077b5; }
+.social-icon.tk { background-color: #000000; }
+
+/* Responsive para tabletas y móviles */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-contact {
+        text-align: center;
+    }
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* --- ADAPTACIÓN PARA MÓVILES (Menú Hamburguesa) --- */
+@media (max-width: 900px) {
+    .hamburger-menu {
+        display: flex; /* Se muestra solo en pantallas medianas y chicas */
+    }
+
+    /* El menú pasa a ser un desplegable vertical oculto */
+    .nav-menu {
+        position: absolute;
+        top: 100%; /* Aparece justo debajo de la barra */
+        left: 0;
+        width: 100%;
+        background-color: #fffaf5;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0; /* Oculto por defecto mediante altura cero */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-item {
+        padding: 20px 40px;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-item.active::after {
+        display: none; /* Quitamos la línea de abajo en móvil */
+    }
+
+    /* Cuando se hace clic (clase 'open' vía JS), el menú se despliega */
+    .nav-menu.open {
+        max-height: 400px; /* Altura suficiente para mostrar los enlaces */
+    }
+
+    /* Animación del botón de hamburguesa para transformarse en una 'X' al abrirse */
+    .hamburger-menu.open .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger-menu.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.open .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
