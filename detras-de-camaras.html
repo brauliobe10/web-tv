@@ -36,18 +36,58 @@
         </div>
     </header>
 
-    <main class="coming-soon-section">
-        <div class="coming-soon-container">
-            <div style="font-size: 3rem; color: #1a1a1a; margin-bottom: 20px;">
-                <i class="fa-solid fa-camera-retro"></i>
-            </div>
+    <main class="gallery-section">
+        <div class="gallery-container">
             <div class="badge-proyectos">Producción Exclusiva</div>
             <h1>Detrás de Cámaras</h1>
-            <p class="coming-soon-message">
-                Estamos preparando una galería exclusiva y videos sobre el proceso de producción de nuestros reportajes. Pronto podrás conocer el alma de nuestras expediciones.
+            <p class="gallery-subtitle">
+                Acompáñanos en el proceso de documentación de nuestras expediciones por las rutas del norte del Perú.
             </p>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Imagen anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="carouselTrack">
+                        <li class="carousel-slide active">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras.jpg" alt="Entrevista y registro fotográfico en el campo">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras1.jpg" alt="Equipo ingresando a las estructuras arqueológicas protegidas">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras2.jpg" alt="Explicación detallada dentro del complejo arqueológico">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras3.jpg" alt="Caminata de la expedición hacia los cerros del norte">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras4.jpg" alt="Fotógrafo capturando la panorámica del paisaje">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras5.jpg" alt="Perspectiva desde la cima mirando hacia el valle">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="/imagenes/detras-de-camaras/detrasdecamaras6.jpg" alt="Registro fotográfico detallado a ras del suelo arqueológico">
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente imagen">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-nav" id="carouselNav">
+                <button class="carousel-indicator active"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
             </div>
         </div>
     </main>
