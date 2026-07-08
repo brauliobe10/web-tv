@@ -110,7 +110,7 @@ body {
     position: relative;
     width: 100%;
     height: 85vh;
-    background-image: url('/imagenes/background.png'); 
+    background-image: url('/imagenes/background.webp'); 
     background-size: cover;
     background-position: center;
     display: flex;
