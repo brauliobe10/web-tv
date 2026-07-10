@@ -744,6 +744,7 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     height: 220px;
+    width: 350px;
 }
 
 .gallery-item img {
@@ -756,7 +757,8 @@ body {
 /* Variaciones de tamaño para dinamismo */
 .item-grande {
     grid-column: span 2;
-    height: 320px;
+    height: 300px;
+    width: 715px;
 }
 
 @media (min-width: 576px) {
