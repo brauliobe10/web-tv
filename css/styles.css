@@ -731,11 +731,16 @@ body {
     color: #777;
 }
 
-/* Mosaico Bento Grid */
+/* ==========================================================================
+   Mosaico Bento Grid - Diseño Responsivo Optimizado
+   ========================================================================== */
+
 .proyecto-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* Por defecto en celulares: 1 sola columna */
+    grid-template-columns: 1fr; 
     gap: 1rem;
+    width: 100%;
 }
 
 .gallery-item {
@@ -743,8 +748,9 @@ body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    height: 220px;
-    width: 350px;
+    /* IMPORTANTE: Eliminamos width fijo para que sea 100% elástico */
+    width: 100%; 
+    height: 250px; /* Altura base cómoda para móviles */
 }
 
 .gallery-item img {
@@ -754,18 +760,44 @@ body {
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Variaciones de tamaño para dinamismo */
-.item-grande {
-    grid-column: span 2;
-    height: 300px;
-    width: 715px;
+/* Efecto hover (opcional, solo si el dispositivo tiene mouse) */
+@media (hover: hover) {
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
 }
 
-@media (min-width: 576px) {
+/* ==========================================================================
+   Media Query para TABLETS (Pantallas medianas)
+   ========================================================================== */
+@media (min-width: 600px) {
+    .proyecto-gallery {
+        /* Pasamos a 2 columnas distribuidas equitativamente */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    /* Corregido el span que estaba vacío */
+    .item-grande {
+        grid-column: span 2; 
+        height: 350px;
+    }
+}
+
+/* ==========================================================================
+   Media Query para ESCRITORIO (Pantallas grandes)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .proyecto-gallery {
+        /* Estructura final avanzada para pantallas grandes */
+        grid-template-columns: repeat(2, 1fr);
+        width: 715px;
+    }
+
     .item-largo {
         grid-row: span 2;
-        height: 100%;
+        height: 100%;; /* Se adapta automáticamente a la altura de las dos filas */
     }
+
 }
 
 /* Efectos Hover Interactivos */
